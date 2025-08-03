@@ -29,7 +29,17 @@ export default function LogPage() {
           </div>
           <div>
             <Label htmlFor="date">Date</Label>
-            <Input type="date" id="date" name="date" required />
+            <Input
+              type="date"
+              id="date"
+              max={
+                new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
+                  .toISOString()
+                  .split("T")[0]
+              }
+              name="date"
+              required
+            />
           </div>
 
           <div>

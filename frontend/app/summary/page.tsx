@@ -26,7 +26,6 @@ import type {
 } from "recharts/types/component/DefaultTooltipContent";
 import Image from "next/image";
 
-// Custom tooltip for the bar chart
 function CustomTooltip(props: TooltipProps<ValueType, NameType>) {
   const { active } = props;
   const label = (props as { label?: string | number }).label;
